@@ -1,5 +1,5 @@
-# CSI-5130-FinalProject
-The AI Quiz Generator is a Python-based application that automatically creates quiz questions from educational text. The goal of this project is to explore how Natural Language Processing (NLP) and basic AI techniques can be used to convert raw text into interactive learning material.
+# Athena
+Athena is a Python-based application that automatically creates quiz questions from educational text. The goal of this project is to explore how Natural Language Processing (NLP) and basic AI techniques can be used to convert raw text into interactive learning material.
 
 Instead of manually writing quizzes, users will eventually be able to enter a topic, and the system will automatically gather information and generate a quiz from that knowledge.
 
