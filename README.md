@@ -6,20 +6,20 @@ Athena is a Python-based application that automatically creates quiz questions f
 Instead of manually writing quizzes, users will eventually be able to enter a topic, and the system will automatically gather information and generate a quiz from that knowledge.
 
 This project is designed as an introductory AI application that demonstrates practical uses of:
-	•	Natural Language Processing
-	•	Keyword extraction
-	•	Automated question generation
-	•	Educational AI tools
+1. Natural Language Processing
+2. Keyword extraction
+3. Automated question generation
+4. Educational AI tools
 
 ## Project Goals
 
 The purpose of this project is to demonstrate how basic artificial intelligence techniques can assist with educational content creation.
 
-Key goals include:
-	•	Exploring practical applications of **Natural Language Processing (NLP)**
-	•	Automating quiz generation from informational text
-	•	Integrating external knowledge sources
-	•	Building a simple but functional **AI-powered learning tool**
+### Key goals include:
+	1. Exploring practical applications of **Natural Language Processing (NLP)**
+	2. Automating quiz generation from informational text
+	3. Integrating external knowledge sources
+	4. Building a simple but functional **AI-powered learning tool**
 
 ## Current Implementation (Temporary)
 
@@ -29,18 +29,18 @@ Users paste a block of text into the program, and the application generates quiz
 
 ### Current Workflow
 	1.	User provides text input
-	•	Example: lecture notes, textbook paragraphs, article excerpts
+		•	Example: lecture notes, textbook paragraphs, article excerpts
 	2.	Text preprocessing
-	•	Removes punctuation
-	•	Removes stopwords (common words like the, is, and)
+		•	Removes punctuation
+		•	Removes stopwords (common words like the, is, and)
 	3.	Keyword extraction
-	•	Uses TF-IDF (Term Frequency–Inverse Document Frequency) to identify important terms in the text
+		•	Uses TF-IDF (Term Frequency–Inverse Document Frequency) to identify important terms in the text
 	4.	Question generation
-	•	Sentences containing important keywords are converted into fill-in-the-blank questions
+		•	Sentences containing important keywords are converted into fill-in-the-blank questions
 	5.	Multiple choice creation
-	•	Uses WordNet from the NLTK library to generate distractor answers
+		•	Uses WordNet from the NLTK library to generate distractor answers
 	6.	Quiz output
-	•	Displays a multiple-choice quiz along with an answer key
+		•	Displays a multiple-choice quiz along with an answer key
 
 Note:
 This text-input system is temporary and mainly used for development and testing purposes.
@@ -55,17 +55,17 @@ Enter a topic → retrieve information from Wikipedia → generate a quiz automa
 
 ### Planned Workflow
 	1.	User enters a topic
-	•	Example: "Cryptography" or "Machine Learning"
+		•	Example: "Cryptography" or "Machine Learning"
 	2.	Wikipedia API request
-	•	The application retrieves article summaries or sections related to the topic
+		•	The application retrieves article summaries or sections related to the topic
 	3.	Content extraction
-	•	Relevant text is collected and cleaned for processing
+		•	Relevant text is collected and cleaned for processing
 	4.	AI text analysis
-	•	NLP techniques identify key concepts and important terms
+		•	NLP techniques identify key concepts and important terms
 	5.	Automatic quiz generation
-	•	Questions are generated from the extracted knowledge
+		•	Questions are generated from the extracted knowledge
 	6.	Quiz output
-	•	Displays a multiple-choice quiz based on real informational sources
+		•	Displays a multiple-choice quiz based on real informational sources
 
 This approach allows the system to generate quizzes from real-world knowledge sources instead of manually provided text.
 
