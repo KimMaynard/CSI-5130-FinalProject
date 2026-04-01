@@ -16,10 +16,10 @@ This project is designed as an introductory AI application that demonstrates pra
 The purpose of this project is to demonstrate how basic artificial intelligence techniques can assist with educational content creation.
 
 ### Key goals include:
-	1. Exploring practical applications of **Natural Language Processing (NLP)**
+	1. Exploring practical applications of Natural Language Processing (NLP)
 	2. Automating quiz generation from informational text
 	3. Integrating external knowledge sources
-	4. Building a simple but functional **AI-powered learning tool**
+	4. Building a simple but functional AI-powered learning tool
 
 ## Current Implementation (Temporary)
 
