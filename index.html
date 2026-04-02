@@ -26,13 +26,18 @@
       <button class="btn" data-value="10">10</button>
     </div>
 
-    <button id="startBtn">Start Quiz</button>
+    <button id="startBtn" class="start-btn">Start Quiz</button>    
+    <div id="setupHelper" class="helper-text">
+        Pick a topic and Athena will build your quiz.
+    </div>
+
+    <div id="setupError" class="error-text"></div>
   </div>
 </div>
 
 <main id="quizScreen" class="hidden">
-  <div class="top">
-    <h2 id="quizTopic"></h2>
+  <div class="quiz-topbar">
+    <h2 id="quizTopic" class="quiz-topic"></h2>
     <div id="timer">02:00</div>
   </div>
 
@@ -40,11 +45,11 @@
 
   <div id="questionsList"></div>
 
-  <button id="submitBtn">Submit</button>
+  <button id="submitBtn" class="submit-btn">Submit</button>
 
   <div id="scoreBox" class="hidden">
     <h3 id="scoreValue"></h3>
-    <button id="retryBtn">Try Again</button>
+    <button id="retryBtn" class="retry-btn">Try Again</button>
   </div>
 </main>
 
