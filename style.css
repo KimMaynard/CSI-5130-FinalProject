@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+}
+
+.page-shell {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.options {
+  margin-bottom: 15px;
+}
+
+.btn {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.btn.active {
+  background: black;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#quizScreen {
+  padding: 20px;
+}
+
+.question {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+.answer {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.answer.selected {
+  background: lightblue;
+}

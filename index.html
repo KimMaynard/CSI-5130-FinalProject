@@ -1,2 +1,53 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Athena</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="page-shell" id="setupScreen">
+  <div class="card setup-card">
+    <h1>Athena</h1>
+
+    <input id="topic" placeholder="Enter a topic..." />
+
+    <div class="options" id="difficulty">
+      <button class="btn" data-value="easy">Easy</button>
+      <button class="btn" data-value="medium">Medium</button>
+      <button class="btn" data-value="hard">Hard</button>
+    </div>
+
+    <div class="options" id="questions">
+      <button class="btn" data-value="3">3</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="10">10</button>
+    </div>
+
+    <button id="startBtn">Start Quiz</button>
+  </div>
+</div>
+
+<main id="quizScreen" class="hidden">
+  <div class="top">
+    <h2 id="quizTopic"></h2>
+    <div id="timer">02:00</div>
+  </div>
+
+  <div id="progressBar"></div>
+
+  <div id="questionsList"></div>
+
+  <button id="submitBtn">Submit</button>
+
+  <div id="scoreBox" class="hidden">
+    <h3 id="scoreValue"></h3>
+    <button id="retryBtn">Try Again</button>
+  </div>
+</main>
+
 <script src="script.js"></script>
+</body>
+</html>
