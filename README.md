@@ -1,4 +1,4 @@
-# Athena AI Quiz Engine
+# Athena
 By: Ashley Chin, Kimberly Maynard
 
 Athena is a **full-stack AI-powered quiz generation web application** that creates interactive quizzes based on any topic the user enters.
