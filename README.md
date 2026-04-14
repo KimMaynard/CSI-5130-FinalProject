@@ -1,96 +1,234 @@
 # Athena
-By: Kimberly Maynard + Ashley Chin
+By: Ashley Chin, Kimberly Maynard
 
-Athena is a Python-based application that automatically creates quiz questions from educational text. The goal of this project is to explore how Natural Language Processing (NLP) and basic AI techniques can be used to convert raw text into interactive learning material.
+Athena is a **full-stack AI-powered quiz generation web application** that creates interactive quizzes based on any topic the user enters.
 
-Instead of manually writing quizzes, users will eventually be able to enter a topic, and the system will automatically gather information and generate a quiz from that knowledge.
+Instead of using static or pre-written questions, Athena dynamically pulls information from Wikipedia and uses AI to generate **natural, high-quality questions**, explanations, and adaptive difficulty.
 
-This project is designed as an introductory AI application that demonstrates practical uses of:
-1. Natural Language Processing
-2. Keyword extraction
-3. Automated question generation
-4. Educational AI tools
-
-## Project Goals
-
-The purpose of this project is to demonstrate how basic artificial intelligence techniques can assist with educational content creation.
-
-### Key goals include:
-	1. Exploring practical applications of Natural Language Processing (NLP)
-	2. Automating quiz generation from informational text
-	3. Integrating external knowledge sources
-	4. Building a simple but functional AI-powered learning tool
-
-## Current Implementation (Temporary)
-
-At the moment, the system works using a manual text input approach.
-
-Users paste a block of text into the program, and the application generates quiz questions based on that content.
-
-### Current Workflow
-	1.	User provides text input
-		•	Example: lecture notes, textbook paragraphs, article excerpts
-	2.	Text preprocessing
-		•	Removes punctuation
-		•	Removes stopwords (common words like the, is, and)
-	3.	Keyword extraction
-		•	Uses TF-IDF (Term Frequency–Inverse Document Frequency) to identify important terms in the text
-	4.	Question generation
-		•	Sentences containing important keywords are converted into fill-in-the-blank questions
-	5.	Multiple choice creation
-		•	Uses WordNet from the NLTK library to generate distractor answers
-	6.	Quiz output
-		•	Displays a multiple-choice quiz along with an answer key
-
-Note:
-This text-input system is temporary and mainly used for development and testing purposes.
-
-## Planned Feature: Wikipedia API Integration
-
-In the next stage of development, the application will integrate the Wikipedia API to automatically gather information about a topic.
-
-Instead of pasting text manually, users will be able to:
-
-Enter a topic → retrieve information from Wikipedia → generate a quiz automatically.
-
-### Planned Workflow
-	1.	User enters a topic
-		•	Example: "Cryptography" or "Machine Learning"
-	2.	Wikipedia API request
-		•	The application retrieves article summaries or sections related to the topic
-	3.	Content extraction
-		•	Relevant text is collected and cleaned for processing
-	4.	AI text analysis
-		•	NLP techniques identify key concepts and important terms
-	5.	Automatic quiz generation
-		•	Questions are generated from the extracted knowledge
-	6.	Quiz output
-		•	Displays a multiple-choice quiz based on real informational sources
-
-This approach allows the system to generate quizzes from real-world knowledge sources instead of manually provided text.
+---
 
 ## Features
 
-### Current Features
-	•	Automatic keyword extraction using TF-IDF
-	•	Sentence-based fill-in-the-blank questions
-	•	Multiple-choice quiz generation
-	•	Distractor answers generated using WordNet
-	•	Adjustable number of quiz questions
-	•	Basic difficulty selection
+- **Topic-based quiz generation** (e.g., *AI*, *Machine Learning*, *Organic Chemistry*)
+- **AI-enhanced question generation** (not just basic scraping)
+- **Difficulty levels**
+  - Easy
+  - Medium
+  - Hard
+- **Multiple question types**
+  - Multiple Choice (A, B, C, D)
+  - True / False (clickable like A/B)
+  - Definition-based questions
+- **Timer system** (auto-submit when time runs out)
+- **Progress bar** (fills as you answer)
+- **Answer explanations** shown after submission
+- **Retry / regenerate quiz functionality**
+- **Full-stack architecture**
+  - Python (Flask backend)
+  - HTML / CSS / JavaScript frontend
 
-### Planned Features
-	•	Wikipedia API integration
-	•	Automatic quiz generation from topic search
-	•	Multiple question types
-	•	True/False
-	•	Definition-based questions
-	•	Improved distractor quality
-	•	Styled quiz interface (HTML/CSS)
-	•	Export quizzes to files (PDF or text)
+---
 
-## Summary
+## Tech Stack
 
-The AI Quiz Generator demonstrates how artificial intelligence techniques can be applied to automate the creation of educational quizzes. By combining NLP, keyword extraction, and external data sources, the system aims to transform raw informational text into structured learning assessments.
+### Frontend
+- HTML5  
+- CSS3  
+- Vanilla JavaScript  
 
-While the current version uses manually provided text, the future implementation will rely on the Wikipedia API to dynamically generate quizzes from real-world knowledg
+### Backend
+- Python 3  
+- Flask  
+- NLTK (text processing)  
+- Scikit-learn (TF-IDF keyword extraction)  
+- Requests (Wikipedia API calls)  
+
+### APIs
+- Wikipedia API (content source)  
+- OpenAI API (AI-generated questions & explanations)  
+
+---
+
+## Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/kimmaynard/athena.git
+cd athena
+```
+
+### 2. Create Virtual Environment
+
+#### Mac / Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+#### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+
+### 3. Install Dependencies
+
+```bash
+pip install flask nltk requests scikit-learn openai
+```
+
+
+### 4. Set OpenAI API Key
+
+#### Mac / Linux
+
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+```
+
+#### Windows (PowerShell)
+
+```bash
+setx OPENAI_API_KEY "your_api_key_here"
+```
+
+
+### 5. Run Backend Server
+
+```bash
+python app.py
+```
+
+You should see:
+
+```
+Running on http://127.0.0.1:5000/
+```
+
+
+### 6. Run Frontend
+
+```bash
+open index.html
+```
+
+Or use **Live Server in VS Code**.
+
+---
+
+## How to Use
+
+1. Enter a topic (e.g., **"AI"**)  
+2. Select difficulty (**Easy / Medium / Hard**)  
+3. Choose number of questions (**3, 5, 10**)  
+4. Click **Start Quiz**  
+5. Answer questions  
+6. Click **Submit**  
+7. View results + explanations  
+
+---
+
+## Project Structure
+
+```bash
+athena/
+│
+├── app.py                  # Flask API server
+├── athena_quiz_engine.py   # Core quiz logic
+│
+├── index.html              # Frontend UI
+├── style.css               # Styling
+├── script.js               # Frontend logic
+│
+├── venv/                   # Virtual environment
+└── README.md
+```
+
+---
+
+## Future Improvements
+
+- User accounts  
+- Quiz history  
+- Leaderboard  
+- Better AI explanations  
+- Mobile optimization  
+
+---
+
+## Project Responsibilities
+
+### **Ashley Chin**
+
+- Implemented and integrated **frontend–backend communication using Flask API endpoints**
+  - Connected to `/api/quiz` for quiz generation
+  - Connected to `/api/grade` for grading and feedback
+- Designed and managed the **end-to-end quiz workflow**:
+  - User input → API request → rendering → submission → results
+- Structured and handled **JSON-based API requests and responses**
+- Built dynamic **state management system** for answers, progress tracking, and submission state
+- Implemented **timer system with auto-submit functionality**
+- Developed the **interactive quiz interface**, including:
+  - Dynamic question rendering
+  - Answer selection handling
+  - Progress bar updates
+- Debugged and resolved **integration and functionality issues** across frontend and API
+- Designed and refined the **user interface (UI/UX)** for usability and consistency
+- Authored and structured the **project README documentation**, including setup and usage instructions
+
+### **Kimberly Maynard**
+
+- Developed the **backend quiz generation engine** using Python and Flask
+- Implemented and structured **API endpoints**:
+  - `/api/quiz` for quiz generation
+  - `/api/grade` for grading logic
+- Integrated **Wikipedia API** for dynamic content retrieval
+- Implemented **text processing pipeline** using NLTK for sentence extraction and filtering
+- Applied **TF-IDF (Scikit-learn)** for keyword extraction and ranking
+- Built **distractor generation logic** for realistic answer options
+- Implemented **grading system** with scoring and detailed results output
+- Created the **final project report and PowerPoint presentation** documenting system design and implementation
+
+---
+
+## License
+
+This project is for educational use.
+
+---
+
+## Final Thoughts
+
+Athena transforms passive learning into an **interactive AI-powered experience**.
+
+Users don’t just memorize — they engage, understand, and learn smarter.
+
+## Presentation Demo Youtube Link
+
+https://youtu.be/0k9ZWB_4OvM
+
+## Sources
+
+Bird, Steven, Edward Loper, and Ewan Klein. Natural Language Processing with Python. O’Reilly Media, 2009.
+
+Brown, Tom B., et al. “Language Models are Few-Shot Learners.” Advances in Neural Information Processing Systems, 2020.
+
+ChatGPT. “Responses to queries about AI quiz generation project.” OpenAI, 13 Apr. 2026, https://chat.openai.com/.
+
+Grinberg, Miguel. Flask Web Development. O’Reilly Media, 2018.
+
+Kahoot! AS. “Kahoot!” https://kahoot.com/.
+
+“MediaWiki API.” Wikimedia Foundation, https://www.mediawiki.org/wiki/API:Main_page.
+
+Manning, Christopher D., Prabhakar Raghavan, and Hinrich Schütze. Introduction to Information Retrieval. Cambridge University Press, 2008.
+
+OpenAI. “OpenAI API Documentation.” OpenAI, 2026, https://platform.openai.com/docs.
+
+Pedregosa, Fabian, et al. “Scikit-learn: Machine Learning in Python.” Journal of Machine Learning Research, vol. 12, 2011, pp. 2825–2830.
+
+Quizlet, Inc. “Quizlet.” https://quizlet.com/.
