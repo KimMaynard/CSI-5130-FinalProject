@@ -120,7 +120,7 @@ Or use **Live Server in VS Code**.
 
 ---
 
-## 🎮 How to Use
+## How to Use
 
 1. Enter a topic (e.g., **"AI"**)  
 2. Select difficulty (**Easy / Medium / Hard**)  
@@ -132,7 +132,7 @@ Or use **Live Server in VS Code**.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 athena/
