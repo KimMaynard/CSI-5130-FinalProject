@@ -210,3 +210,25 @@ Users don’t just memorize — they engage, understand, and learn smarter.
 ## Presentation Demo Youtube Link
 
 https://youtu.be/0k9ZWB_4OvM
+
+## Sources
+
+Bird, Steven, Edward Loper, and Ewan Klein. Natural Language Processing with Python. O’Reilly Media, 2009.
+
+Brown, Tom B., et al. “Language Models are Few-Shot Learners.” Advances in Neural Information Processing Systems, 2020.
+
+ChatGPT. “Responses to queries about AI quiz generation project.” OpenAI, 13 Apr. 2026, https://chat.openai.com/.
+
+Grinberg, Miguel. Flask Web Development. O’Reilly Media, 2018.
+
+Kahoot! AS. “Kahoot!” https://kahoot.com/.
+
+“MediaWiki API.” Wikimedia Foundation, https://www.mediawiki.org/wiki/API:Main_page.
+
+Manning, Christopher D., Prabhakar Raghavan, and Hinrich Schütze. Introduction to Information Retrieval. Cambridge University Press, 2008.
+
+OpenAI. “OpenAI API Documentation.” OpenAI, 2026, https://platform.openai.com/docs.
+
+Pedregosa, Fabian, et al. “Scikit-learn: Machine Learning in Python.” Journal of Machine Learning Research, vol. 12, 2011, pp. 2825–2830.
+
+Quizlet, Inc. “Quizlet.” https://quizlet.com/.
